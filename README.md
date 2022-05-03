@@ -13,3 +13,18 @@ The test are automated using Newman and GitHub Actions. A workflow is setup that
 The HTML results are also being published using GitHub Pages and can be viewed [here](https://kafziel4.github.io/postman-newman/).
 
 ![report](./assets/report.PNG)
+
+## How to run it locally
+
+- Install [Node.js](https://nodejs.org/en/)
+- Download the collection and the environment
+- Install Newman: `npm install -g newman`
+- Install htmlextra: `npm install -g newman-reporter-htmlextra`
+- Run the collection with Newman: `newman run ReqRes.postman_collection.json -e ReqRes_Web.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export testResults/index.html`
+- The HTML report will be generated in the testResults folder
+
+![newman](assets/newman.gif)
+
+- Alternatively, import the collection and the environment into Postman and run the tests using the Collection Runner.
+
+![postman_runner](./assets/postman_runner.gif)
