@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a0e8eba9-c701-4f81-95db-85985c75a49b",
+		"_postman_id": "2e2aa2af-8b62-480a-96ee-f1d8bdd10e01",
 		"name": "ReqRes",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20746734"
 	},
 	"item": [
 		{
@@ -82,6 +83,10 @@
 							"    avatar: 'https://reqres.in/img/faces/12-image.jpg',\r",
 							"  },\r",
 							"];\r",
+							"\r",
+							"pm.test('Body - data length should be 6', () => {\r",
+							"  pm.expect(jsonData.data).to.have.lengthOf(6);\r",
+							"});\r",
 							"\r",
 							"for (let i = 0; i < users.length; i += 1) {\r",
 							"  pm.test(`Body - data for ${users[i].first_name} should be correct`, () => {\r",
@@ -292,6 +297,10 @@
 							"    pantone_value: '15-5217',\r",
 							"  },\r",
 							"];\r",
+							"\r",
+							"pm.test('Body - data length should be 6', () => {\r",
+							"  pm.expect(jsonData.data).to.have.lengthOf(6);\r",
+							"});\r",
 							"\r",
 							"for (let i = 0; i < colors.length; i += 1) {\r",
 							"  pm.test(`Body - data for ${colors[i].name} should be correct`, () => {\r",
